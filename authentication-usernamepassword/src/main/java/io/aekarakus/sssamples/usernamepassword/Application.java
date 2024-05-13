@@ -1,4 +1,4 @@
-package io.aekarakus.sssamples;
+package io.aekarakus.sssamples.usernamepassword;
 
 
 import org.springframework.boot.SpringApplication;

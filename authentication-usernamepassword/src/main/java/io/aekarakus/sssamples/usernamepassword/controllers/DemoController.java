@@ -1,4 +1,4 @@
-package io.aekarakus.sssamples.controllers;
+package io.aekarakus.sssamples.usernamepassword.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

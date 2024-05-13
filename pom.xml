@@ -16,6 +16,7 @@
     <description>Demo project for Spring Boot</description>
     <modules>
         <module>authentication-usernamepassword</module>
+        <module>ldapserver</module>
     </modules>
     <properties>
         <java.version>17</java.version>
