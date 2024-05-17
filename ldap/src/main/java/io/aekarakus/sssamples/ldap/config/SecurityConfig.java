@@ -1,37 +1,27 @@
 package io.aekarakus.sssamples.ldap.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.ldap.core.ContextSource;
+import org.springframework.ldap.core.support.BaseLdapPathContextSource;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.ldap.LdapPasswordComparisonAuthenticationManagerFactory;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
 
 @Configuration
 public class SecurityConfig {
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(
-                        req -> req.anyRequest().fullyAuthenticated()
-                )
-                .formLogin(Customizer.withDefaults());
-
-        return http.build();
+    ContextSource contextSource() {
+        return new DefaultSpringSecurityContextSource("ldap://localhost:33389/dc=springframework,dc=org");
     }
 
-    @Autowired
-    public void configure(AuthenticationManagerBuilder builder) throws Exception {
-        builder
-                .ldapAuthentication()
-                .userDnPatterns("uid={0},cn=users,cn=accounts,dc=aekarakus,dc=io")
-                .groupSearchBase("cn=groups")
-                .contextSource()
-                .url("ldap://freeipa.aekarakus.io/dc=aekarakus,dc=io")
-                .and()
-                .passwordCompare()
-                .passwordEncoder(new BCryptPasswordEncoder());
+    @Bean
+    AuthenticationManager authenticationManager(BaseLdapPathContextSource contextSource) {
+        LdapPasswordComparisonAuthenticationManagerFactory factory = new LdapPasswordComparisonAuthenticationManagerFactory(contextSource, NoOpPasswordEncoder.getInstance());
+        factory.setUserDnPatterns("uid={0},ou=people");
+        factory.setPasswordAttribute("userPassword");
+        return factory.createAuthenticationManager();
     }
 }
