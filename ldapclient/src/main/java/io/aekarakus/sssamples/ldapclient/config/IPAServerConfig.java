@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.ldap.core.ContextSource;
 import org.springframework.ldap.core.support.BaseLdapPathContextSource;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.ldap.LdapBindAuthenticationManagerFactory;
 import org.springframework.security.config.ldap.LdapPasswordComparisonAuthenticationManagerFactory;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
@@ -14,14 +15,13 @@ public class IPAServerConfig {
 
     @Bean
     ContextSource contextSource() {
-        return new DefaultSpringSecurityContextSource("ldap://192.168.60.221:389/dc=springframework,dc=org");
+        return new DefaultSpringSecurityContextSource("ldap://192.168.60.221:389/dc=aekarakus,dc=io");
     }
 
     @Bean
     AuthenticationManager authenticationManager(BaseLdapPathContextSource contextSource) {
-        LdapPasswordComparisonAuthenticationManagerFactory factory = new LdapPasswordComparisonAuthenticationManagerFactory(contextSource, NoOpPasswordEncoder.getInstance());
-        factory.setUserDnPatterns("uid={0},ou=people");
-        factory.setPasswordAttribute("userPassword");
+        LdapBindAuthenticationManagerFactory factory = new LdapBindAuthenticationManagerFactory(contextSource);
+        factory.setUserDnPatterns("uid={0},cn=users,cn=accounts");
         return factory.createAuthenticationManager();
     }
 }
