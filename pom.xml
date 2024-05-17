@@ -17,6 +17,7 @@
     <modules>
         <module>authentication-usernamepassword</module>
         <module>ldapserver</module>
+        <module>ldap</module>
     </modules>
     <properties>
         <java.version>17</java.version>

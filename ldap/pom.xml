@@ -8,11 +8,15 @@
     </parent>
 
     <groupId>io.aekarakus.sssamples</groupId>
-    <artifactId>ldapserver</artifactId>
+    <artifactId>ldap</artifactId>
     <packaging>jar</packaging>
 
-    <name>ldapserver</name>
+    <name>ldap</name>
     <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -22,14 +26,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.unboundid</groupId>
-            <artifactId>unboundid-ldapsdk</artifactId>
-            <version>6.0.11</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-ldap</artifactId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.ldap</groupId>
