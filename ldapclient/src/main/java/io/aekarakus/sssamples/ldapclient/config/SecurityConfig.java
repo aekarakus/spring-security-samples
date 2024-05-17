@@ -1,4 +1,4 @@
-package io.aekarakus.sssamples.ldap.config;
+package io.aekarakus.sssamples.ldapclient.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

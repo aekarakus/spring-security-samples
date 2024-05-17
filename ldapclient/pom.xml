@@ -8,7 +8,7 @@
     </parent>
 
     <groupId>io.aekarakus.sssamples</groupId>
-    <artifactId>ldap</artifactId>
+    <artifactId>ldapclient</artifactId>
     <packaging>jar</packaging>
 
     <name>ldap</name>

@@ -1,4 +1,4 @@
-package io.aekarakus.sssamples.ldap;
+package io.aekarakus.sssamples.ldapclient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
