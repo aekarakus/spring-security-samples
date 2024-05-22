@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class JDBCAuthorizationApplication
+public class UserDetailsApplication
 {
     public static void main( String[] args ){
-        SpringApplication.run(JDBCAuthorizationApplication.class, args);
+        SpringApplication.run(UserDetailsApplication.class, args);
     }
 }

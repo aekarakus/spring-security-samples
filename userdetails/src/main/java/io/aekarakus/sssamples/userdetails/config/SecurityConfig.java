@@ -6,7 +6,9 @@ import org.springframework.ldap.core.ContextSource;
 import org.springframework.ldap.core.support.BaseLdapPathContextSource;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.ldap.LdapPasswordComparisonAuthenticationManagerFactory;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
 
 @Configuration
@@ -22,5 +24,10 @@ public class SecurityConfig {
         factory.setUserDnPatterns("uid={0},ou=people");
         factory.setPasswordAttribute("userPassword");
         return factory.createAuthenticationManager();
+    }
+
+    @Bean
+    PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
     }
 }
