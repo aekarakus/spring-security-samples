@@ -23,15 +23,17 @@ public class Bootstrapper implements CommandLineRunner {
 
         User user1 = new User();
         user1.setId(0L);
-        user1.setUserName("Matthew");
+        user1.setUserName("matthew");
         user1.setPassword(passwordEncoder.encode("password"));
         user1.setEmail("matthew@aekarakus.io");
+        user1.setAuthorities(List.of("ROLE_ADMIN", "ROLE_USER"));
 
         User user2 = new User();
         user2.setId(1L);
-        user2.setUserName("Matthew");
+        user2.setUserName("alice");
         user2.setPassword(passwordEncoder.encode("password"));
-        user2.setEmail("matthew@aekarakus.io");
+        user2.setEmail("alice@aekarakus.io");
+        user2.setAuthorities(List.of("ROLE_SUPERVISOR"));
 
         repository.saveAll(List.of(user1, user2));
     }
