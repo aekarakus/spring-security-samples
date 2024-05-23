@@ -8,7 +8,7 @@
     </parent>
 
     <groupId>io.aekarakus.sssamples</groupId>
-    <artifactId>authentication-usernamepassword</artifactId>
+    <artifactId>usernamepassword</artifactId>
     <packaging>jar</packaging>
 
     <name>authentication-usernamepassword</name>

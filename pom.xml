@@ -15,7 +15,7 @@
     <name>Spring Security Samples</name>
     <description>Demo project for Spring Boot</description>
     <modules>
-        <module>authentication-usernamepassword</module>
+        <module>usernamepassword</module>
         <module>ldap/ldapserver</module>
         <module>ldap/ldapclient</module>
         <module>ad</module>
