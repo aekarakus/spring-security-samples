@@ -1,4 +1,4 @@
-package io.aekarakus.sssamples.userdetails.controller;
+package io.aekarakus.sssamples.jpauserdetails.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package io.aekarakus.sssamples.userdetails;
+package io.aekarakus.sssamples.jpauserdetails;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

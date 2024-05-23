@@ -8,7 +8,7 @@
     </parent>
 
     <groupId>io.aekarakus.sssamples</groupId>
-    <artifactId>userdetails</artifactId>
+    <artifactId>jpauserdetails</artifactId>
     <packaging>jar</packaging>
 
     <name>jdbcauthorization</name>

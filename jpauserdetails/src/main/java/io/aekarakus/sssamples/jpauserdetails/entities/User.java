@@ -1,10 +1,9 @@
-package io.aekarakus.sssamples.userdetails.entities;
+package io.aekarakus.sssamples.jpauserdetails.entities;
 
 
-import io.aekarakus.sssamples.userdetails.converters.AuthoritiesConverter;
+import io.aekarakus.sssamples.jpauserdetails.converters.AuthoritiesConverter;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;

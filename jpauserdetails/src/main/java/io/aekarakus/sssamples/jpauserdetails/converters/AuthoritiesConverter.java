@@ -1,4 +1,4 @@
-package io.aekarakus.sssamples.userdetails.converters;
+package io.aekarakus.sssamples.jpauserdetails.converters;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;

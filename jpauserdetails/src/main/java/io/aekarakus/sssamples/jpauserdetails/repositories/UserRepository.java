@@ -1,6 +1,6 @@
-package io.aekarakus.sssamples.userdetails.repositories;
+package io.aekarakus.sssamples.jpauserdetails.repositories;
 
-import io.aekarakus.sssamples.userdetails.entities.User;
+import io.aekarakus.sssamples.jpauserdetails.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

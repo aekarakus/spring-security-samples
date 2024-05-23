@@ -1,11 +1,10 @@
-package io.aekarakus.sssamples.userdetails;
+package io.aekarakus.sssamples.jpauserdetails;
 
-import io.aekarakus.sssamples.userdetails.entities.User;
-import io.aekarakus.sssamples.userdetails.repositories.UserRepository;
+import io.aekarakus.sssamples.jpauserdetails.entities.User;
+import io.aekarakus.sssamples.jpauserdetails.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 

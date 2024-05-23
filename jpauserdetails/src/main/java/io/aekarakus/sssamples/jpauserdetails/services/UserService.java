@@ -1,8 +1,8 @@
-package io.aekarakus.sssamples.userdetails.services;
+package io.aekarakus.sssamples.jpauserdetails.services;
 
-import io.aekarakus.sssamples.userdetails.entities.CustomUserDetails;
-import io.aekarakus.sssamples.userdetails.entities.User;
-import io.aekarakus.sssamples.userdetails.repositories.UserRepository;
+import io.aekarakus.sssamples.jpauserdetails.entities.CustomUserDetails;
+import io.aekarakus.sssamples.jpauserdetails.entities.User;
+import io.aekarakus.sssamples.jpauserdetails.repositories.UserRepository;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
