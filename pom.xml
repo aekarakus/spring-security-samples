@@ -21,6 +21,7 @@
         <module>ad</module>
         <module>jpauserdetails</module>
         <module>jdbcuserdetails</module>
+        <module>ldapauthoritiespopulator</module>
     </modules>
     <properties>
         <java.version>17</java.version>
