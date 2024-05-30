@@ -22,8 +22,9 @@
         <module>jpauserdetails</module>
         <module>jdbcuserdetails</module>
         <module>ldapauthoritiespopulator</module>
-        <module>oauth2</module>
-        <module>oauth2config</module>
+        <module>oauth/oauth2basis/oauth2</module>
+        <module>oauth/codeflow/oauth2codeflow</module>
+        <module>oauth/codeflow/oauth2codeflowresourceserver</module>
     </modules>
     <properties>
         <java.version>17</java.version>

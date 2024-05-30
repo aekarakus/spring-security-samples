@@ -1,4 +1,4 @@
-package io.aekarakus.sssamples.oauth2config;
+package io.aekarakus.oauth2codeflowresourceserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class Oauth2ConfigApplication
+public class Oauth2CodeFlowResourceserverApplication
 {
     public static void main( String[] args )
     {
-        SpringApplication.run(Oauth2ConfigApplication.class, args);
+        SpringApplication.run(Oauth2CodeFlowResourceserverApplication.class, args);
     }
 }

@@ -8,7 +8,7 @@
     </parent>
 
     <groupId>io.aekarakus.sssamples</groupId>
-    <artifactId>oauth2config</artifactId>
+    <artifactId>oauth2codeflow</artifactId>
     <packaging>jar</packaging>
 
     <name>oauth2config</name>
