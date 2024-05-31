@@ -23,8 +23,9 @@
         <module>jdbcuserdetails</module>
         <module>ldapauthoritiespopulator</module>
         <module>oauth/oauth2basis/oauth2</module>
-        <module>oauth/codeflow/oauth2codeflow</module>
+        <module>oauth/codeflow/oauth2codeflowauthserver</module>
         <module>oauth/codeflow/oauth2codeflowresourceserver</module>
+        <module>oauth/pkce/oauth2pkceauthserver</module>
     </modules>
     <properties>
         <java.version>17</java.version>

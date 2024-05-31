@@ -5,13 +5,13 @@
         <groupId>io.aekarakus</groupId>
         <artifactId>sssamples</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../../pom.xml</relativePath>
     </parent>
 
-    <groupId>io.aekarakus.sssamples</groupId>
-    <artifactId>oauth2codeflow</artifactId>
+    <artifactId>oauth2pkceauthserver</artifactId>
     <packaging>jar</packaging>
 
-    <name>oauth2config</name>
+    <name>oauth2pkceauthserver</name>
     <url>http://maven.apache.org</url>
 
     <properties>

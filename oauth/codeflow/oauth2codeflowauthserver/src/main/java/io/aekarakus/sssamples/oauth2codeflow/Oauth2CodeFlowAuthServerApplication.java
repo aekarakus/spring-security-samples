@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class Oauth2CodeFlowApplication
+public class Oauth2CodeFlowAuthServerApplication
 {
     public static void main( String[] args )
     {
-        SpringApplication.run(Oauth2CodeFlowApplication.class, args);
+        SpringApplication.run(Oauth2CodeFlowAuthServerApplication.class, args);
     }
 }
