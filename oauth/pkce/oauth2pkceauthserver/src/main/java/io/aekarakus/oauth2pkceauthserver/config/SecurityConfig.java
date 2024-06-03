@@ -81,8 +81,8 @@ public class SecurityConfig {
         RegisteredClient oidcClient = RegisteredClient
                 .withId(UUID.randomUUID().toString())
                 .clientId("client")
-                .clientSecret(encoder.encode("password"))
-                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+//                .clientSecret(encoder.encode("password"))
+                .clientAuthenticationMethod(ClientAuthenticationMethod.NONE)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
                 .redirectUri("https://google.com/")
@@ -90,6 +90,7 @@ public class SecurityConfig {
                 .scope(OidcScopes.PROFILE)
                 .clientSettings(ClientSettings.builder()
                         .requireProofKey(true)
+                        .requireAuthorizationConsent(true)
                         .build())
                 .build();
 
