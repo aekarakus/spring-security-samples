@@ -26,6 +26,7 @@
         <module>oauth/codeflow/oauth2codeflowauthserver</module>
         <module>oauth/codeflow/oauth2codeflowresourceserver</module>
         <module>oauth/pkce/oauth2pkceauthserver</module>
+        <module>oauth/pkce/oauth2pkceresourceserver</module>
     </modules>
     <properties>
         <java.version>17</java.version>
